@@ -14,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class NIOFileAPITest {
     private static String HOME = System.getProperty("user.home");
     private static String pLAY_WITH_NIOString = "TempPlayGround";
-
     @Test
     public void givenPathWhenCheckedThenConfirm() throws IOException {
         Path homePath = Paths.get(HOME);

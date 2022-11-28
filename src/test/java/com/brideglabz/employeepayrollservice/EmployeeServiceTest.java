@@ -45,6 +45,25 @@ public class EmployeeServiceTest {
             new EmployeePayrollFileIOService().writeData(employeePayRollList);
         }
     }
+    public void printData() {
+        EmployeeServiceTest employeePayrollFileIOService = null;
+        IOService iOService = null;
+        if (iOService.equals(IOService.CONSOLE_IO))
+            System.out.println(this.employeePayRollList);
+        else if (iOService.equals(IOService.FILE_1O))
+            employeePayrollFileIOService.printData();
+    }
+
+    public long countEntries() {
+        long entries = 0;
+        EmployeeServiceTest employeePayrollFileIOService = null;
+        IOService ioService = null;
+        if (ioService.equals(IOService.CONSOLE_IO))
+            entries = employeePayRollList.size();
+        else if (ioService.equals(IOService.FILE_1O))
+            entries = employeePayrollFileIOService.countEntries();
+        return entries;
+    }
 
 
 }
