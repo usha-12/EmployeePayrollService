@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class EmployeeServiceTest {
     public static Scanner userInputScanner = new Scanner(System.in);
-
     private enum IOService {
         CONSOLE_IO, FILE_1O, DB_IO, REST_IO
     }
@@ -38,7 +37,6 @@ public class EmployeeServiceTest {
         employeePayRollList.add(new EmployeePayrollData(id, name, salary));
 
     }
-
     public void writeEmployeePayrollData() {
         System.out.println("Writing Employee Payroll Roaster to console :" + employeePayRollList);
     }
