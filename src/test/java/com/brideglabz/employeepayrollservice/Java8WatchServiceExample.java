@@ -9,6 +9,7 @@ import java.util.Map;
 import static java.nio.file.StandardWatchEventKinds.*;
 
 public class Java8WatchServiceExample {
+
     private final WatchService watcher;
     private final Map<WatchKey, Path> dirWatchers;
     public Java8WatchServiceExample(Path dir) throws IOException {

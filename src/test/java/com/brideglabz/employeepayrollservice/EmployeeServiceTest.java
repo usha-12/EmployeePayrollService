@@ -38,7 +38,13 @@ public class EmployeeServiceTest {
 
     }
     public void writeEmployeePayrollData() {
-        System.out.println("Writing Employee Payroll Roaster to console :" + employeePayRollList);
+        IOService ioService = null;
+        if(ioService.equals(IOService.CONSOLE_IO))
+            System.out.println("Writing Employee Payroll Roaster to console :" + employeePayRollList);
+        else if(ioService.equals(IOService.FILE_1O)) {
+            new EmployeePayrollFileIOService().writeData(employeePayRollList);
+        }
     }
+
 
 }
